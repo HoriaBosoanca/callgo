@@ -52,7 +52,7 @@ func (s *Session) addMember(conn *websocket.Conn, displayName string) (member *M
 func (s *Session) getMember(memberID string) (member *Member) {
 	member, exists := s.Members[memberID]
 	if !exists {
-		log.Println("Member does not exist:", memberID)
+		// log.Println("Member does not exist:", memberID)
 		return &Member{}
 	}
 	return member
