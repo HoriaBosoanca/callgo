@@ -1,0 +1,51 @@
+<div class="menu-item">
+    <div id="title-box">
+        <h1 style="color: yellowgreen;">CALLGO</h1>
+    </div>
+</div>
+<!-- <div>
+    <img src="../../assets/images/Callgo-logo2v2.png">
+</div> -->
+
+<!-- MENU -->
+<div style="display: flex;">
+    <!-- Create UI -->
+    <div style="background-color: rgb(46, 46, 46); width: 45%; height: 50vh; border-radius: 1vh; margin-left: 2.5%;">
+        <!-- Name input -->
+        <div class="menu-item mb">
+            <div id="name-box">
+                <p id="name-p">Name</p>
+                <textarea [(ngModel)]="displayNameCreate" class="my-textarea" #nameInputCreate></textarea>
+            </div>
+        </div>
+        <!-- Join button -->
+        <div class="menu-item">
+            <button (click)="startMeeting()" class="menu-button">
+                Create meeting
+            </button>
+        </div>
+    </div>
+    <!-- Join UI -->
+    <div style="background-color: rgb(101, 101, 101); width: 45%; height: 50vh; border-radius: 1vh; margin-left: 5%;">
+        <!-- Name input -->
+        <div class="menu-item mb">
+            <div id="name-box">
+                <p id="name-p">Name</p>
+                <textarea [(ngModel)]="displayNameJoin" class="my-textarea" #nameInputJoin></textarea>
+            </div>
+        </div>
+        <!-- Meeting ID input -->
+        <div class="menu-item mb">
+            <div id="name-box">
+                <p id="name-p">Meeting id</p>
+                <textarea [(ngModel)]="meetingID" class="my-textarea" #joinInput></textarea>
+            </div>
+        </div>
+        <!-- Join button -->
+        <div class="menu-item">
+            <button (click)="joinMeeting()" class="menu-button">
+                Join meeting
+            </button>
+        </div>
+    </div>
+</div>

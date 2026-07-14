@@ -1,0 +1,6 @@
+<div class="list-item">
+    <p class="text-special"> • meeting code: {{ meetingCode }} </p>
+</div>
+<div class="list-item" *ngFor="let member of apiService.stableMembers">
+    <p class="text"> name: {{ member.name }} | ID: {{ member.memberID }} | <button class="kick-button" (click)="kickMember(member.memberID)">kick</button> </p>
+</div>

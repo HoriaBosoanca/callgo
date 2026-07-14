@@ -1,0 +1,27 @@
+<div class="dropdown" id="dropdown">
+    <app-list *ngIf="listIsDisplayed"></app-list>
+</div>
+
+<app-display></app-display>
+
+<div #videoBox class="videoBox"></div>
+
+<div id="controls">
+    <button class="iobutton" (click)="toggleCamera()" #cameraButton>
+        <img style="width: 100%; margin-left: 3%;" src="assets/images/camera-icon.png">
+    </button>
+
+    <button class="iobutton" (click)="toggleMicrophone()" #microphoneButton>
+        <img style="width: 50%;" src="assets/images/microphone-icon.png">
+    </button>
+
+    <button class="iobuttonred" (click)="toggleAudio()" #audioButton>
+        <img style="width: 50%;" src="assets/images/headphones-icon.png">
+    </button>
+
+    <button class="iobutton" (click)="toggleList()">
+        <img style="width: 70%;" src="assets/images/list-icon.png">
+    </button>
+</div>
+
+<video #videoElement autoplay muted style="display: none;"></video>
